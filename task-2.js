@@ -7,13 +7,13 @@ const ingredients = [
     'Приправы',
   ];
 
-const elements = ingredients.map(option => {
+const elements = ingredients.map(ingredient => {
 const navItemEl = document.createElement('li');
-navItemEl.textContent=option;
+navItemEl.textContent=ingredient;
 return navItemEl;
     
 });
-// console.log(elements);
+console.log(elements);
 
 const categoriesEL = document.querySelector('#ingredients');
 categoriesEL.append(...elements);
