@@ -8,7 +8,7 @@
 const input = document.querySelector('#validation-input');
 
 
-input.addEventListener('input', showCount);
+input.addEventListener('input',showCount);
 
 
 function showCount(){

@@ -12,21 +12,25 @@ const images = [
   ];
 
 
-const makeGalleryCard = ({url,alt}) => {
-    const itemEl = document.createElement('li');
-    const imageEl = document.createElement('img');
-    imageEl.src = url;
-    imageEl.alt = alt;
-    imageEl.width= 300;
-    itemEl.append(imageEl);
-    return itemEl;
-  };
+for(let el of images) 
+document.querySelector('#gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" alt="${el.alt}" width="300"; ></li>`);
 
-  const elements = images.map(makeGalleryCard);
-  console.log(elements);
 
-const galleryEL = document.querySelector('#gallery');
-galleryEL.append(...elements);
+//   const makeGalleryCard = ({url,alt}) => {
+//     const itemEl = document.createElement('li');
+//     const imageEl = document.createElement('img');
+//     imageEl.src = url;
+//     imageEl.alt = alt;
+//     imageEl.width= 300;
+//     itemEl.append(imageEl);
+//     return itemEl;
+//   };
+
+//   const elements = images.map(makeGalleryCard);
+//   console.log(elements);
+
+// const galleryEL = document.querySelector('#gallery');
+// galleryEL.append(...elements);
 
 
 
